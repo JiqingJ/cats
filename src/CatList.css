@@ -23,8 +23,13 @@ table {
 	align-items: center;
 	display: flex;
 	flex-direction: column;
+	margin: auto;
  }
 
 td {
 	text-align: center;
+}
+
+.btn-space {
+    margin: 10px;
 }

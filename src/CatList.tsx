@@ -64,7 +64,7 @@ const CatList = () => {
         <div className="modal">
           <button
             type="button"
-            className="btn btn-secondary"
+            className="btn btn-space"
             data-dismiss="modal"
             onClick={handleClose}
           >
