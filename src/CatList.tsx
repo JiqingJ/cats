@@ -14,16 +14,13 @@ const CatList = () => {
   }, []);
 
   const handleDelete = (id: string) => {
-    console.log("id is ", id);
     const newCats = cats.filter((cat) => cat.id != id);
-    console.log("new cats are ", newCats);
     setCats(newCats);
   };
 
   const handleClose = () => setIsModalOpen(false);
 
   const handleViewImage = (url: string) => {
-    console.log("id is ", url);
     setIsModalOpen(true);
     setImg(url);
   };
