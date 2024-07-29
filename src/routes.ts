@@ -1,4 +1,4 @@
-import { Cat } from "./model";
+import { Cat } from "./models";
 
 
 export async function fetchCats(): Promise<Cat[]> {

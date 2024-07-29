@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Cat } from "./model";
+import { Cat } from "./models";
 import { fetchCats } from "./routes";
 import Button from "react-bootstrap/Button";
 import Modal from "react-modal";
@@ -8,7 +8,7 @@ import "./CatList.css";
 const CatList = () => {
   const [cats, setCats] = useState<Cat[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [img, setImg] = useState("");
+  const [img, setImg] = useState("/src/assets/default.jpg");
   useEffect(() => {
     fetchCats().then((data) => setCats(data));
   }, []);
@@ -41,7 +41,7 @@ const CatList = () => {
               <tr key={key}>
                 <td>{val.id}</td>
                 <td>
-                  <img src={val.url} width="250" />
+                  <img src={val.url || img} width="250" />
                 </td>
                 <td>
                   {val.width} x {val.height}
